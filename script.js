@@ -92,10 +92,7 @@ tl.to(".text-1, .text-2, .text-3, .text-4, .text-5, .text-6, .text-7, .text-8, .
         .to("#img-two",{
             backgroundSize : "50%"
             
-        },"a")
-        .to(".section",{
-            backgroundColor : "yellow",
-        },"a")
+        })
         gsap.timeline({
             scrollTrigger:{
                 trigger : "#img-three",
@@ -149,6 +146,19 @@ tl.to(".text-1, .text-2, .text-3, .text-4, .text-5, .text-6, .text-7, .text-8, .
                         .to("#img-five",{
                             backgroundSize : "50%"
                         })
+                        gsap.timeline({
+                            scrollTrigger:{
+                                trigger : "#last",
+                                start: "0% 90%",
+                                end : "200% 90%",
+                                scrub : true,
+                        
+                            }
+                           })
+                        
+                            .to(".flex-p-content",{
+                                scale: "1.2",
+                            })
 document.querySelector("#img-one").addEventListener("mouseenter", function(){
     document.querySelector("html").style.backgroundColor = "#dfd2be";
 })
