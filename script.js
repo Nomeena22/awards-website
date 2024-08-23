@@ -32,6 +32,94 @@ tl.to(".text-1, .text-2, .text-3, .text-4, .text-5, .text-6, .text-7, .text-8, .
       $(".contact").scramble(2000, 50, "alphabet", true);
     }
   }, 'scr')
+
+  var tl2 = gsap.timeline({
+    scrollTrigger: {
+        trigger : "#one",
+        pin: true,
+        // markers : true,
+        start: "50% 50%",
+        end : "150% 50%",
+        scrub : true,
+    }
+  })
+  tl2.to(".flex-p-content",{
+    scale: "0.8"
+  })
+   .to("#one-text",{
+    top : "50%",
+   })
+
+   gsap.timeline({
+    scrollTrigger:{
+        trigger : "#img-one",
+        markers : true,
+        start: "0% 90%",
+        end : "200% 90%",
+        scrub : true,
+
+    }
+   })
+
+    .to("#img-one",{
+        backgroundSize : "50%"
+    })
+    gsap.timeline({
+        scrollTrigger:{
+            trigger : "#img-two",
+            markers : true,
+            start: "0% 90%",
+            end : "200% 90%",
+            scrub : true,
+    
+        }
+       })
+    
+        .to("#img-two",{
+            backgroundSize : "50%"
+        })
+        gsap.timeline({
+            scrollTrigger:{
+                trigger : "#img-three",
+                markers : true,
+                start: "0% 90%",
+                end : "200% 90%",
+                scrub : true,
+        
+            }
+           })
+        
+            .to("#img-three",{
+                backgroundSize : "50%"
+            })
+            gsap.timeline({
+                scrollTrigger:{
+                    trigger : "#img-four",
+                    markers : true,
+                    start: "0% 90%",
+                    end : "200% 90%",
+                    scrub : true,
+            
+                }
+               })
+            
+                .to("#img-four",{
+                    backgroundSize : "50%"
+                })
+                gsap.timeline({
+                    scrollTrigger:{
+                        trigger : "#img-five",
+                        markers : true,
+                        start: "0% 90%",
+                        end : "200% 90%",
+                        scrub : true,
+                
+                    }
+                   })
+                
+                    .to("#img-five",{
+                        backgroundSize : "50%"
+                    })
 // tl.to (".text-1",{
 //     opacity : 1,
 //     duration : 0.07,
