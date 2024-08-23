@@ -1,3 +1,18 @@
+const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+
+
+
 var tl = gsap.timeline();
 
 tl.to(".text-1, .text-2, .text-3, .text-4, .text-5, .text-6, .text-7, .text-8, .text-9, .text-10, .text-23, .text-63, .text-97, .text-100", {
@@ -6,7 +21,7 @@ tl.to(".text-1, .text-2, .text-3, .text-4, .text-5, .text-6, .text-7, .text-8, .
     stagger: {
       each: 0.20, // 0.07 to show + 0.07 to hide = 0.14
       repeat: 1,
-      yoyo: true
+      yoyo: true,
     }
   })
   .to(".loader", {
@@ -53,8 +68,7 @@ tl.to(".text-1, .text-2, .text-3, .text-4, .text-5, .text-6, .text-7, .text-8, .
    gsap.timeline({
     scrollTrigger:{
         trigger : "#img-one",
-        markers : true,
-        start: "0% 90%",
+        // start: "0% 90%",
         end : "200% 90%",
         scrub : true,
 
@@ -62,12 +76,12 @@ tl.to(".text-1, .text-2, .text-3, .text-4, .text-5, .text-6, .text-7, .text-8, .
    })
 
     .to("#img-one",{
-        backgroundSize : "50%"
+        backgroundSize : "55%"
     })
     gsap.timeline({
         scrollTrigger:{
             trigger : "#img-two",
-            markers : true,
+            // markers : true,
             start: "0% 90%",
             end : "200% 90%",
             scrub : true,
@@ -77,11 +91,15 @@ tl.to(".text-1, .text-2, .text-3, .text-4, .text-5, .text-6, .text-7, .text-8, .
     
         .to("#img-two",{
             backgroundSize : "50%"
-        })
+            
+        },"a")
+        .to(".section",{
+            backgroundColor : "yellow",
+        },"a")
         gsap.timeline({
             scrollTrigger:{
                 trigger : "#img-three",
-                markers : true,
+                // markers : true,
                 start: "0% 90%",
                 end : "200% 90%",
                 scrub : true,
@@ -95,7 +113,6 @@ tl.to(".text-1, .text-2, .text-3, .text-4, .text-5, .text-6, .text-7, .text-8, .
             gsap.timeline({
                 scrollTrigger:{
                     trigger : "#img-four",
-                    markers : true,
                     start: "0% 90%",
                     end : "200% 90%",
                     scrub : true,
@@ -109,7 +126,6 @@ tl.to(".text-1, .text-2, .text-3, .text-4, .text-5, .text-6, .text-7, .text-8, .
                 gsap.timeline({
                     scrollTrigger:{
                         trigger : "#img-five",
-                        markers : true,
                         start: "0% 90%",
                         end : "200% 90%",
                         scrub : true,
@@ -120,6 +136,55 @@ tl.to(".text-1, .text-2, .text-3, .text-4, .text-5, .text-6, .text-7, .text-8, .
                     .to("#img-five",{
                         backgroundSize : "50%"
                     })
+                    gsap.timeline({
+                        scrollTrigger:{
+                            trigger : "#img-six",
+                            start: "0% 90%",
+                            end : "200% 90%",
+                            scrub : true,
+                    
+                        }
+                       })
+                    
+                        .to("#img-five",{
+                            backgroundSize : "50%"
+                        })
+document.querySelector("#img-one").addEventListener("mouseenter", function(){
+    document.querySelector("html").style.backgroundColor = "#dfd2be";
+})
+document.querySelector("#img-one").addEventListener("mouseleave", function(){
+    document.querySelector("html").style.backgroundColor = "#000";
+})
+document.querySelector("#img-two").addEventListener("mouseenter", function(){
+    document.querySelector("html").style.backgroundColor = "#1a354e";
+})
+document.querySelector("#img-two").addEventListener("mouseleave", function(){
+    document.querySelector("html").style.backgroundColor = "#000";
+})
+document.querySelector("#img-three").addEventListener("mouseenter", function(){
+    document.querySelector("html").style.backgroundColor = "#b14";
+})
+document.querySelector("#img-three").addEventListener("mouseleave", function(){
+    document.querySelector("html").style.backgroundColor = "#000";
+})
+document.querySelector("#img-four").addEventListener("mouseenter", function(){
+    document.querySelector("html").style.backgroundColor = "#062929";
+})
+document.querySelector("#img-four").addEventListener("mouseleave", function(){
+    document.querySelector("html").style.backgroundColor = "#000";
+})
+document.querySelector("#img-five").addEventListener("mouseenter", function(){
+    document.querySelector("html").style.backgroundColor = "#b05d22";
+})
+document.querySelector("#img-five").addEventListener("mouseleave", function(){
+    document.querySelector("html").style.backgroundColor = "#000";
+})
+document.querySelector("#img-six").addEventListener("mouseenter", function(){
+    document.querySelector("html").style.backgroundColor = "#281069";
+})
+document.querySelector("#img-six").addEventListener("mouseleave", function(){
+    document.querySelector("html").style.backgroundColor = "#000";
+})
 // tl.to (".text-1",{
 //     opacity : 1,
 //     duration : 0.07,
