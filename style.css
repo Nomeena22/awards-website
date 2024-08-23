@@ -47,7 +47,19 @@
   
   .text-loader {
     color: #fff;
-    font-size: 2vw;
-    /* opacity: 0; */
+    font-size: 1.5vw;
     font-family: Mounument;
+    opacity: 0;
+  }
+  .text-23 {
+    margin-left: 8vw;
+  }
+  .text-63 {
+    margin-left: 20vw;
+  }
+  .text-97 {
+    margin-left: 16vw;
+  }
+  .text-100 {
+    margin-left: 3vw;
   }
